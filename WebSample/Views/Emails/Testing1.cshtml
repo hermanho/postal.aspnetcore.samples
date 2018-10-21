@@ -1,0 +1,9 @@
+﻿@{
+    ViewBag.Title = "";
+    string url = $"{Model.RequestPath.Scheme}://{Model.RequestPath.Host}";
+}
+@section EmailHeader{Subject: Email testing subject
+}
+
+Hello @ViewBag.Name
+

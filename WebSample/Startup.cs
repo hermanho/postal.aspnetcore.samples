@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Postal.AspNetCore;
+using WebSample.Services.Email;
 
 namespace WebSample
 {
@@ -33,6 +35,9 @@ namespace WebSample
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.Configure<EmailSenderOptions>(Configuration.GetSection("EmailSender"));
+            services.AddPostal();
+            services.AddTransient<IEmailSenderEnhance, EmailSender>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

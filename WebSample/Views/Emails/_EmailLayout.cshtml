@@ -1,0 +1,32 @@
+﻿@model Postal.Email
+Content-Type: text/html; charset=utf-8
+X-Auto-Response-Suppress: All
+@RenderSection("EmailHeader", required: false)
+
+@{
+    Layout = null;
+    string url = $"{Model.RequestPath.Scheme}://{Model.RequestPath.Host}";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title></title>
+    <style type="text/css">
+        body {
+            font-family: Calibri;
+            font-size: 12pt;
+        }
+    </style>
+</head>
+<body style="font-family: Calibri; font-size: 12pt;">
+    <p>
+        @RenderBody()
+    </p>
+    <footer>
+    </footer>
+</body>
+</html>
