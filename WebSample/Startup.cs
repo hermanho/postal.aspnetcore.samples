@@ -34,7 +34,7 @@ namespace WebSample
             });
 
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.Configure<EmailSenderOptions>(Configuration.GetSection("EmailSender"));
             services.AddPostal();
             services.AddTransient<IEmailSenderEnhance, EmailSender>();

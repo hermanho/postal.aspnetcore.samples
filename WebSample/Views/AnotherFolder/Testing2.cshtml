@@ -1,0 +1,10 @@
+﻿@{
+    Layout = "../Emails/_EmailLayout";
+    ViewBag.Title = "";
+    string url = $"{Model.RequestPath.Scheme}://{Model.RequestPath.Host}";
+}
+
+@section EmailHeader{Subject: Email 2 testing subject
+}
+Hello @ViewBag.Name
+This is an email with template outside the folder "Emails"
