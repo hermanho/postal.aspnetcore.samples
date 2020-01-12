@@ -27,12 +27,12 @@ namespace WebSample.Services.Email
         // Our private configuration variables
         private readonly EmailSenderOptions _emailOptions;
         private readonly IEmailService _emailService;
-        private readonly IHostingEnvironment _env;
+        private readonly IWebHostEnvironment _env;
 
         // Get our parameterized configuration
         public EmailSender(IEmailService emailService,
             IEmailViewRender emailViewRenderer,
-            IHostingEnvironment env,
+            IWebHostEnvironment env,
             IOptions<EmailSenderOptions> emailOptions)
         {
             _emailOptions = emailOptions.Value;
