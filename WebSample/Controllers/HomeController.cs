@@ -4,19 +4,23 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Routing;
+using Microsoft.Extensions.Options;
+using Postal;
+using Postal.AspNetCore;
 using WebSample.Models;
-using WebSample.Services.Email;
 
 namespace WebSample.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IEmailSenderEnhance _emailSender;
+        private readonly IEmailService _emailService;
+        private readonly EmailServiceOptions _emailServiceOptions;
 
-        public HomeController(IEmailSenderEnhance emailSender)
+        public HomeController(IEmailService emailService,
+            IOptions<EmailServiceOptions> o)
         {
-            _emailSender = emailSender;
+            _emailService = emailService;
+            _emailServiceOptions = o.Value;
         }
 
         public IActionResult Index()
@@ -37,37 +41,38 @@ namespace WebSample.Controllers
 
         public async Task<IActionResult> SendEmail1()
         {
-            var requestPath = new Postal.RequestPath();
+            //_emailServiceOptions;
+            var requestPath = new RequestPath();
             requestPath.PathBase = Request.PathBase.ToString();
             requestPath.Host = Request.Host.ToString();
             requestPath.IsHttps = Request.IsHttps;
             requestPath.Scheme = Request.Scheme;
             requestPath.Method = Request.Method;
 
-            var emailData = new Postal.Email("Testing1");
+            var emailData = new Email("Testing1");
             emailData.RequestPath = requestPath;
             emailData.ViewData["to"] = "hello@example.com";
             emailData.ViewData["Name"] = "Sam";
             
-            await _emailSender.SendEmailAsync(emailData);
+            await _emailService.SendAsync(emailData);
             return View();
         }
 
         public async Task<IActionResult> SendEmail2()
         {
-            var requestPath = new Postal.RequestPath();
+            var requestPath = new RequestPath();
             requestPath.PathBase = Request.PathBase.ToString();
             requestPath.Host = Request.Host.ToString();
             requestPath.IsHttps = Request.IsHttps;
             requestPath.Scheme = Request.Scheme;
             requestPath.Method = Request.Method;
 
-            var emailData = new Postal.Email("~/Views/AnotherFolder/Testing2.cshtml");
+            var emailData = new Email("~/Views/AnotherFolder/Testing2.cshtml");
             emailData.RequestPath = requestPath;
             emailData.ViewData["to"] = "hello@example.com";
             emailData.ViewData["Name"] = "Sam";
             
-            await _emailSender.SendEmailAsync(emailData);
+            await _emailService.SendAsync(emailData);
             return View();
         }
     }
