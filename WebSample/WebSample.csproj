@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Postal.AspNetCore" Version="2.7.0" />
+    <PackageReference Include="Postal.AspNetCore" Version="2.7.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -17,6 +17,10 @@
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Pages\" />
   </ItemGroup>
 
 </Project>

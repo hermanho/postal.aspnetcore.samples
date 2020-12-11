@@ -75,5 +75,22 @@ namespace WebSample.Controllers
             await _emailService.SendAsync(emailData);
             return View();
         }
+
+        public IActionResult PerviewEmail1()
+        {
+            var requestPath = new RequestPath();
+            requestPath.PathBase = Request.PathBase.ToString();
+            requestPath.Host = Request.Host.ToString();
+            requestPath.IsHttps = Request.IsHttps;
+            requestPath.Scheme = Request.Scheme;
+            requestPath.Method = Request.Method;
+
+            var emailData = new Email("Testing1");
+            emailData.RequestPath = requestPath;
+            emailData.ViewData["to"] = "hello@example.com";
+            emailData.ViewData["Name"] = "Sam";
+
+            return new EmailViewResult(emailData);
+        }
     }
 }

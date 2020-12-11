@@ -1,0 +1,27 @@
+﻿@model Postal.Email
+@{
+    Layout = null;
+    ViewBag.Title = "";
+    string url = $"{Model.RequestPath.Scheme}://{Model.RequestPath.Host}";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title></title>
+    <style type="text/css">
+        body {
+            font-family: Calibri;
+            font-size: 12pt;
+        }
+    </style>
+</head>
+<body style="font-family: Calibri; font-size: 12pt;">
+    <p>
+        Hello @ViewBag.Name
+    </p>
+    <footer>
+    </footer>
+</body>
+</html>
