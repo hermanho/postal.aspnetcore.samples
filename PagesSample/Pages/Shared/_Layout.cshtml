@@ -21,9 +21,15 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>
+                        @{
+                            var paths = new string[] { "Preview1", "Preview2", "SendEmail1" };
+                        }
+                        @foreach (var path in paths)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/@path">@path</a>
+                            </li>
+                        }
                     </ul>
                 </div>
             </div>
@@ -37,7 +43,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2020 - PagesSample - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            &copy; 2022 - PagesSample - <a asp-area="" asp-page="/Privacy">Privacy</a>
         </div>
     </footer>
 

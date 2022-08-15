@@ -1,11 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Postal.AspNetCore" Version="2.7.1" />
+    <PackageReference Include="Postal.AspNetCore" Version="3.0.0-pre-build01" />
   </ItemGroup>
 
   <ItemGroup>

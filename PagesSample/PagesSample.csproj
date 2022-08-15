@@ -1,18 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <UserSecretsId>82506053-6f70-4623-8a0d-324fd91177af</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Postal.AspNetCore" Version="2.7.1" />
-    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\postal.aspnetcore\src\Postal.AspNetCore\Postal.AspNetCore.csproj" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.16.1" />
+    <PackageReference Include="Postal.AspNetCore" Version="3.0.0-pre-build01" />
   </ItemGroup>
 
 </Project>

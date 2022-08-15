@@ -8,15 +8,15 @@ using Postal;
 
 namespace PagesSample.Pages
 {
-    public class Preview1Model : PageModel
+    public class SendEmail1 : PageModel
     {
         private readonly IEmailService _emailService;
-        public Preview1Model(IEmailService emailService)
+        public SendEmail1(IEmailService emailService)
         {
             _emailService = emailService;
         }
 
-        public async Task<IActionResult> OnGet()
+        public async Task OnGet()
         {
             var requestPath = new RequestPath();
             requestPath.PathBase = Request.PathBase.ToString();
@@ -31,7 +31,6 @@ namespace PagesSample.Pages
             emailData.ViewData["Name"] = "Sam";
 
             await _emailService.SendAsync(emailData);
-            return new EmailViewResult(emailData);
         }
     }
 }

@@ -11,14 +11,17 @@ namespace PagesSample.Pages
 {
     public class Preview2Model : PageModel
     {
-        //private readonly IRouter _router;
-
-        public Preview2Model()
+        private readonly IEmailService _emailService;
+        public Preview2Model(IEmailService emailService)
         {
-            //_router = router;
+            _emailService = emailService;
         }
 
-        public IActionResult OnGet()
+        public void OnGet()
+        {
+        }
+
+        public async Task<IActionResult> OnGetSend()
         {
             var requestPath = new RequestPath();
             requestPath.PathBase = Request.PathBase.ToString();
@@ -32,8 +35,8 @@ namespace PagesSample.Pages
             emailData.ViewData["to"] = "hello@example.com";
             emailData.ViewData["Name"] = "Sam";
 
-            return new EmailViewResult(emailData);
-            //return Page();
+            await _emailService.SendAsync(emailData);
+            return new OkObjectResult("OK");
         }
     }
 }
