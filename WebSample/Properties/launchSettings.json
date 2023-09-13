@@ -21,7 +21,8 @@
       "launchUrl": "http://localhost:5000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "ASPNETCORE_URLS": "http://localhost:5000"
+        "ASPNETCORE_URLS": "http://localhost:5000",
+        "COMPlus_ReadyToRun": "0"
       },
       "distributionName": ""
     }
@@ -30,8 +31,8 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:1071",
-      "sslPort": 44322
+      "applicationUrl": "http://localhost:62937/",
+      "sslPort": 44391
     }
   }
 }
