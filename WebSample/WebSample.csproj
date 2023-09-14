@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Postal.AspNetCore" Version="3.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Update="libman.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
@@ -20,10 +24,6 @@
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\postal.aspnetcore\src\Postal.AspNetCore\Postal.AspNetCore.csproj" />
   </ItemGroup>
 
 </Project>
