@@ -23,15 +23,8 @@ namespace PagesSample.Pages
 
         public async Task<IActionResult> OnGetSend()
         {
-            var requestPath = new RequestPath();
-            requestPath.PathBase = Request.PathBase.ToString();
-            requestPath.Host = Request.Host.ToString();
-            requestPath.IsHttps = Request.IsHttps;
-            requestPath.Scheme = Request.Scheme;
-            requestPath.Method = Request.Method;
-
-            var emailData = new Email("Pages/Emails/Testing2.cshtml");
-            emailData.RequestPath = requestPath;
+            var emailData = new Email("~/Pages/Emails/Testing2.cshtml");
+            emailData.CaptureHttpContext(HttpContext);
             emailData.ViewData["to"] = "hello@example.com";
             emailData.ViewData["Name"] = "Sam";
 

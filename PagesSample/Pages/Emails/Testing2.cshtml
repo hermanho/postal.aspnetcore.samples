@@ -1,8 +1,9 @@
 ﻿@model Postal.Email
+Subject: Email testing2 subject
+
 @{
     Layout = null;
     ViewBag.Title = "";
-    string url = $"{Model.RequestPath.Scheme}://{Model.RequestPath.Host}";
 }
 <!DOCTYPE html>
 <html>
@@ -21,6 +22,7 @@
     <p>
         Hello @ViewBag.Name
     </p>
+    This is Testing 2
     <footer>
     </footer>
 </body>

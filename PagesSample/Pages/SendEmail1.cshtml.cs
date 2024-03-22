@@ -25,7 +25,7 @@ namespace PagesSample.Pages
             requestPath.Scheme = Request.Scheme;
             requestPath.Method = Request.Method;
 
-            var emailData = new Email("Pages/Emails/Testing1.cshtml");
+            var emailData = new Email("~/Pages/Emails/Testing1.cshtml");
             emailData.RequestPath = requestPath;
             emailData.ViewData["to"] = "hello@example.com";
             emailData.ViewData["Name"] = "Sam";

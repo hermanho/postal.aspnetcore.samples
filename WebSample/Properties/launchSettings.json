@@ -13,7 +13,7 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "http://localhost:5000"
+      "applicationUrl": "http://localhost:5066"
     },
     "WSL": {
       "commandName": "WSL2",
@@ -21,7 +21,7 @@
       "launchUrl": "http://localhost:5000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "ASPNETCORE_URLS": "http://localhost:5000",
+        "ASPNETCORE_URLS": "http://localhost:5066",
         "COMPlus_ReadyToRun": "0"
       },
       "distributionName": ""

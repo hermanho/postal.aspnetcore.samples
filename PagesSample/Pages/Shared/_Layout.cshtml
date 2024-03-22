@@ -21,15 +21,6 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
                         </li>
-                        @{
-                            var paths = new string[] { "Preview1", "Preview2", "SendEmail1" };
-                        }
-                        @foreach (var path in paths)
-                        {
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-page="/@path">@path</a>
-                            </li>
-                        }
                     </ul>
                 </div>
             </div>

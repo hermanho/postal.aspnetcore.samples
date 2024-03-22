@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebSample", "WebSample\WebS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PagesSample", "PagesSample\PagesSample.csproj", "{E5154110-F04D-4576-A45A-703EA2EE1BD9}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI_HangfireSample", "WebAPI_HangfireSample\WebAPI_HangfireSample.csproj", "{C727F8E2-E41A-4F42-BF5A-2579F7E5EFCE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{E5154110-F04D-4576-A45A-703EA2EE1BD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5154110-F04D-4576-A45A-703EA2EE1BD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E5154110-F04D-4576-A45A-703EA2EE1BD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C727F8E2-E41A-4F42-BF5A-2579F7E5EFCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C727F8E2-E41A-4F42-BF5A-2579F7E5EFCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C727F8E2-E41A-4F42-BF5A-2579F7E5EFCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C727F8E2-E41A-4F42-BF5A-2579F7E5EFCE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

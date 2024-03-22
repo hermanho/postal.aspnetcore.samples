@@ -8,3 +8,13 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+
+@{
+    var paths = new string[] { "Preview1", "Preview2", "SendEmail1" };
+}
+@foreach (var path in paths)
+{
+    <a asp-area="" asp-page="/@path">@path</a>
+    <br />
+}
